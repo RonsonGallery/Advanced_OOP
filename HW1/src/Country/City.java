@@ -5,24 +5,22 @@ import java.util.List;
 import Location.Location;
 import Population.Person;
 
-public class Moshav extends Settlement {
-	
+public class City extends Settlement {
 
-	public Moshav() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Moshav(String name, Location location, List<Person> people, RamzorColor ramzorColor) {
+	public City(String name, Location location, List<Person> people, RamzorColor ramzorColor) {
 		super(name, location, people, ramzorColor);
 		// TODO Auto-generated constructor stub
 	}
-	
-	//Calculates ramzor grade for Moshav
 
-	@Override
+	public City() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//Calculates ramzor grade for City
+	
 	public RamzorColor calculateRamzorGrade() {
-		this.setPercent(0.3 + 3*(Math.pow(1.2, getPercent())*Math.pow(this.getP() - 0.35,5)));
+		this.setPercent(0.2*Math.pow(4, 1.25 * this.getP()));
+		
 		if(this.getPercent() < 0.4) {
 			this.setRamzorColor(RamzorColor.Green);
 		}
@@ -41,8 +39,10 @@ public class Moshav extends Settlement {
 
 	@Override
 	public String toString() {
-		return "Moshav []" + super.toString() + "] \n";
+		return "City [toString()=" + super.toString() + "] \n";
 	}
-	
 
-}	
+
+
+
+}

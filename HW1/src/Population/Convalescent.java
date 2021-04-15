@@ -1,15 +1,22 @@
 package Population;
 
+import Country.Settlement;
+import Location.Point;
 import Virus.IVirus;
 
 public class Convalescent extends Person {
 	
+	public Convalescent(int age, Point location, Settlement settlement) {
+		super(age, location, settlement);
+		// TODO Auto-generated constructor stub
+	}
+
 	private IVirus virus;
 
 	@Override
 	public double contagionProbability() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0.2;
 	}
 
 	@Override
@@ -18,11 +25,6 @@ public class Convalescent extends Person {
 		return null;
 	}
 	
-	public double propabilityToGetSick() {
-		
-			return 0.2;
-			
-	}
 
 	public IVirus getVirus() {
 		return virus;
@@ -30,6 +32,10 @@ public class Convalescent extends Person {
 
 	public void setVirus(IVirus virus) {
 		this.virus = virus;
+	}
+	
+	public void updateTime() {
+		
 	}
 
 }

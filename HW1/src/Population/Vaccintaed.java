@@ -1,11 +1,26 @@
 package Population;
 
+import Country.Settlement;
+import Location.Point;
 import Virus.IVirus;
 
 public class Vaccintaed extends Person {
-	
 	private long vaccinationTime;
 	
+	public Vaccintaed(int age, Point location, Settlement settlement,long vaccinationTime) {
+		super(age, location, settlement);
+		// TODO Auto-generated constructor stub
+		this.vaccinationTime=vaccinationTime;
+	}
+	
+	public Vaccintaed() {
+		super(18,new Point(),new Settlement());
+		this.vaccinationTime = 0;
+	}
+	
+	public void updateTime() {
+		
+	}
 
 	@Override
 	public double contagionProbability() {

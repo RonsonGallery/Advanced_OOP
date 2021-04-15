@@ -40,16 +40,22 @@ public class Point {
 	}
 	
 	public Point(int x, int y) {
-		if(x >= 0 && y >= 0) {
+
 			this.x = x;
 			this.y = y;
-		} else {
-			this.x = 0;
-			this.y = 0;
-			System.out.println("Wrong input setting default values of 0");
-		}
-	}
 
+		}
+		
+	
+	 public boolean equals(Point other)
+	 {
+		 if(x==other.x && y==other.y) {
+			 System.out.println("is equals");
+			 return true; 
+		 } 
+		System.out.println("Not equals ");
+	    return false; 	
+	}
 	@Override
 	public String toString() {
 		return "[x=" + x + ", y=" + y + "]";

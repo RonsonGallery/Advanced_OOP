@@ -1,0 +1,4 @@
+City; Ashdod; 0;0; 90;50; 100
+City; Beer-Sheva; 30;0; 80;80; 30
+Moshav; Givataim; 15;15; 10;20; 20
+Kibbutz; Galuyot; 100; 100; 20;20; 10

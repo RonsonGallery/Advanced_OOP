@@ -11,7 +11,15 @@ public abstract class Person {
 	private Settlement settlement;
 	public abstract double contagionProbability();
 	public abstract Person contagion(IVirus ivirus);
+
 	
+	public Person(int age, Point location, Settlement settlement) {
+		// TODO Auto-generated constructor stub
+		this.age=age;
+		this.location=location;
+		this.settlement=settlement;	
+	}
+
 	public int getAge() {
 		return age;
 	}
@@ -35,5 +43,12 @@ public abstract class Person {
 	public void setSettlement(Settlement settlement) {
 		this.settlement = settlement;
 	}
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", location=" + location +"Settelment: " +this.settlement.getName() +"] \n";
+	}
+
+
+	}
 		
-}
+
